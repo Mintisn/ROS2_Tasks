@@ -1,4 +1,0 @@
-Invoking command in '/home/zychen/dev_ws/build/cpp_pubsub': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/zychen/dev_ws/build/cpp_pubsub -- -j2 -l2
-Invoked command in '/home/zychen/dev_ws/build/cpp_pubsub' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/zychen/dev_ws/build/cpp_pubsub -- -j2 -l2
-Invoking command in '/home/zychen/dev_ws/build/cpp_pubsub': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/zychen/dev_ws/build/cpp_pubsub
-Invoked command in '/home/zychen/dev_ws/build/cpp_pubsub' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/zychen/dev_ws/build/cpp_pubsub
