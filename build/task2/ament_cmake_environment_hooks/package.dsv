@@ -1,0 +1,4 @@
+source;share/task2/local_setup.bash
+source;share/task2/local_setup.dsv
+source;share/task2/local_setup.sh
+source;share/task2/local_setup.zsh

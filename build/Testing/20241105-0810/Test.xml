@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="(empty)"
+	BuildStamp="20241105-0810-Experimental"
+	Name="zychen-virtual-machine"
+	Generator="ctest-3.22.1"
+	CompilerName="/usr/bin/c++"
+	CompilerVersion="11.4.0"
+	OSName="Linux"
+	Hostname="zychen-virtual-machine"
+	OSRelease="6.8.0-48-generic"
+	OSVersion="#48~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Mon Oct  7 11:24:13 UTC 2"
+	OSPlatform="x86_64"
+	Is64Bits="1"
+	VendorString="AuthenticAMD"
+	VendorID="Advanced Micro Devices"
+	FamilyID="25"
+	ModelID="80"
+	ProcessorCacheSize="512"
+	NumberOfLogicalCPU="2"
+	NumberOfPhysicalCPU="2"
+	TotalVirtualMemory="3429"
+	TotalPhysicalMemory="3868"
+	LogicalProcessorsPerPhysical="1"
+	ProcessorClockFrequency="3193.88"
+	>
+	<Testing>
+		<StartDateTime>Nov 05 16:10 HKT</StartDateTime>
+		<StartTestTime>1730794231</StartTestTime>
+		<TestList/>
+		<EndDateTime>Nov 05 16:10 HKT</EndDateTime>
+		<EndTestTime>1730794231</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>

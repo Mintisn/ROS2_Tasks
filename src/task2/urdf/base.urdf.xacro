@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+    <!-- 声明base模块 声明宏-->
+    <xacro:include filename="$(find task2)/urdf/common_inertia.xacro"/>
+
+    <xacro:macro name="base_xacro" params="length radius">
+        
+        <!-- 添加虚拟部件 -->
+        <link name="base_footprint">
+        </link>
+
+
+        <!-- 机器人身体部分 -->
+        <link name="base_link">
+            <!-- 部件外观描述 -->
+            <visual>
+                <!-- 沿自己几何中心的偏移与旋转量 -->
+                <origin xyz="0 0 0" rpy="0 0 0" />
+                <!-- 几何形状 -->
+                <geometry>
+                    <!-- 圆柱体，半径0.1m，高度 0.12m 在这里把参数用上 -->
+                    <cylinder length="${length}" radius="${radius}" />
+                </geometry>
+                <!-- 材质子标签-蓝色 -->
+                <material name="blue">
+                    <color rgba="0.1 0.1 1.0 0.5" />
+                </material>
+            </visual>
+            <!-- 添加碰撞属性,可以和visual相同 -->
+            <collision>
+                <!-- 沿自己几何中心的偏移与旋转量 -->
+                <origin xyz="0 0 0" rpy="0 0 0" />
+                <!-- 几何形状 -->
+                <geometry>
+                    <!-- 圆柱体，半径0.1m，高度 0.12m 在这里把参数用上 -->
+                    <cylinder length="${length}" radius="${radius}" />
+                </geometry>
+                <!-- 材质子标签-蓝色 -->
+                <material name="blue">
+                    <color rgba="0.1 0.1 1.0 0.5" />
+                </material>
+            </collision>
+            <!-- 加入惯性和质量 -->
+            <xacro:cylinder_inertia m="1.0" r="${radius}" h="${length}"/>
+        </link>
+
+        <!-- 机器人关节 -->
+        <joint name="joint_name" type="fixed">
+            
+            <!-- 父部件 -->
+            <parent link="base_footprint" />
+            <!-- 子部件 -->
+            <child link="base_link" />
+            <!-- 这里最好设置成一个可变的值 -->
+            <origin xyz="0.0 0.0 ${length / 2.0 + 0.032-0.001}" rpy="0.0 0.0 0.0"/>
+        </joint>
+
+        <gazebo reference="base_link">
+            <material>Gazebo/Black</material>
+        </gazebo>
+    </xacro:macro>
+</robot>

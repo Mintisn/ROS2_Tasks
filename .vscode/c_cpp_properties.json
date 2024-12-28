@@ -1,0 +1,17 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**"
+                ,"/opt/ros/humble/include/**" //TODO 2024年10月15日如果你使用了自定义的工作空间，并通过 colcon build 编译源代码，那么文件会位于你的工作空间中
+                ,"/usr/include/**"
+            ],
+            "defines": [],
+            "cStandard": "c17",
+            "cppStandard": "gnu++17",
+            "intelliSenseMode": "linux-gcc-x64"
+        }
+    ],
+    "version": 4
+}

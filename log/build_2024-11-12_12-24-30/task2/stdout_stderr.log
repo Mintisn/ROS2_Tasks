@@ -1,0 +1,31 @@
+[ 50%] Built target talker
+[100%] Built target listener
+-- Install configuration: ""
+-- Installing: /home/zychen/dev_ws/install/task2/lib/task2/talker
+-- Set runtime path of "/home/zychen/dev_ws/install/task2/lib/task2/talker" to ""
+-- Installing: /home/zychen/dev_ws/install/task2/lib/task2/listener
+-- Set runtime path of "/home/zychen/dev_ws/install/task2/lib/task2/listener" to ""
+-- Installing: /home/zychen/dev_ws/install/task2/share/task2/urdf
+-- Installing: /home/zychen/dev_ws/install/task2/share/task2/urdf/test.urdf
+-- Installing: /home/zychen/dev_ws/install/task2/share/task2/launch
+-- Installing: /home/zychen/dev_ws/install/task2/share/task2/launch/test1.launch
+-- Installing: /home/zychen/dev_ws/install/task2/share/task2/launch/test1.launch.py
+-- Installing: /home/zychen/dev_ws/install/task2/share/task2/config
+-- Installing: /home/zychen/dev_ws/install/task2/share/task2/config/config3.rviz
+-- Installing: /home/zychen/dev_ws/install/task2/share/task2/config/config.rviz
+-- Installing: /home/zychen/dev_ws/install/task2/share/task2/config/task2.rviz
+-- Installing: /home/zychen/dev_ws/install/task2/share/ament_index/resource_index/package_run_dependencies/task2
+-- Installing: /home/zychen/dev_ws/install/task2/share/ament_index/resource_index/parent_prefix_path/task2
+-- Installing: /home/zychen/dev_ws/install/task2/share/task2/environment/ament_prefix_path.sh
+-- Installing: /home/zychen/dev_ws/install/task2/share/task2/environment/ament_prefix_path.dsv
+-- Installing: /home/zychen/dev_ws/install/task2/share/task2/environment/path.sh
+-- Installing: /home/zychen/dev_ws/install/task2/share/task2/environment/path.dsv
+-- Installing: /home/zychen/dev_ws/install/task2/share/task2/local_setup.bash
+-- Installing: /home/zychen/dev_ws/install/task2/share/task2/local_setup.sh
+-- Installing: /home/zychen/dev_ws/install/task2/share/task2/local_setup.zsh
+-- Installing: /home/zychen/dev_ws/install/task2/share/task2/local_setup.dsv
+-- Installing: /home/zychen/dev_ws/install/task2/share/task2/package.dsv
+-- Installing: /home/zychen/dev_ws/install/task2/share/ament_index/resource_index/packages/task2
+-- Installing: /home/zychen/dev_ws/install/task2/share/task2/cmake/task2Config.cmake
+-- Installing: /home/zychen/dev_ws/install/task2/share/task2/cmake/task2Config-version.cmake
+-- Installing: /home/zychen/dev_ws/install/task2/share/task2/package.xml

@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>task2</name>
+  <version>0.0.0</version>
+  <description>TODO: Package description</description>
+  <maintainer email="zychen@todo.todo">zychen</maintainer>
+  <license>MIT</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+  <!-- 添加 urdf 和 xacro 依赖 -->
+  <!-- <build_depend>urdf</build_depend>
+  <exec_depend>urdf</exec_depend> -->
+  <!-- exec depend -->
+  <!-- <build_depend>config</build_depend>
+  <exec_depend>config</exec_depend>
+  <build_depend>xacro</build_depend>
+  <exec_depend>xacro</exec_depend>
+  <build_depend>gazebo_ros</build_depend>
+  <exec_depend>gazebo_ros</exec_depend> -->
+  <!-- <build_depend>launch</build_depend>
+  <exec_depend>launch</exec_depend> -->
+
+  <buildtool_depend>rclcpp</buildtool_depend>
+  <buildtool_depend>std_msgs</buildtool_depend>
+  <buildtool_depend>sensor_msgs</buildtool_depend>
+  <buildtool_depend>cv_bridge</buildtool_depend>
+  <buildtool_depend>OpenCV</buildtool_depend>
+
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

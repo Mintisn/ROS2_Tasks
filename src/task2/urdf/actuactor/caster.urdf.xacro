@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+    <xacro:include filename="$(find task2)/urdf/common_inertia.xacro"/>
+    <!-- 声明万向轮模块模块 轮子需要复用-->
+    <xacro:macro name="caster_xacro" params="caster_name xyz">
+        <!-- 机器人IMU部件 -->
+        <link name="${caster_name}_link">
+            <visual>
+                <!-- 需要反转圆柱体90度 -->
+                <origin xyz="0 0 0" rpy="1.57079 0 0" />
+                <geometry>
+                    <!-- 万向轮形状应该为球体 -->
+                    <sphere radius="0.016"/> 
+                </geometry>
+                <material name="yellow">
+                    <color rgba="1 1 0 0.8" />
+                </material>
+            </visual>
+            <collision>
+                <!-- 需要反转圆柱体90度 -->
+                <origin xyz="0 0 0" rpy="1.57079 0 0" />
+                <geometry>
+                    <!-- 万向轮形状应该为球体 -->
+                    <sphere radius="0.016"/> 
+                </geometry>
+                <material name="yellow">
+                    <color rgba="1 1 0 0.8" />
+                </material>
+            </collision>
+            <xacro:sphere_inertia m="0.05" r="0.016"/>
+        </link>
+
+        <!-- 万向轮设置为固定,实际上应该是可动的,我们后续仿真进行操作-->
+        <joint name="${caster_name}_joint" type="fixed">
+            <!-- 父部件 -->
+            <parent link="base_link" />
+            <!-- 子部件 -->
+            <child link="${caster_name}_link" />
+            <!-- 子部件相对父部件的平移和旋转 -->
+            <origin xyz="${xyz}" rpy="0 0 0" />
+        </joint>
+
+        <gazebo reference="${caster_name}_link">
+        <!--  https://www.bilibili.com/video/BV1k8mNYyEjW/?spm_id_from=333.788.videopod.sections&vd_source=6aef8a8b18d581883e4331f31b8d68f0 这里摩檫力为0的配置-->
+            <mu1 value="0.0" />
+            <mu2 value="0.0" />
+            <kp value="1000000000.0" />
+            <kd value="1.0" />
+            <material>Gazebo/Blue</material>
+        </gazebo>
+    </xacro:macro>
+
+</robot>

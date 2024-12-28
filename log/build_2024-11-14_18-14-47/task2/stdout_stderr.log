@@ -1,0 +1,93 @@
+-- Found rclcpp: 16.0.10 (/opt/ros/humble/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found sensor_msgs: 4.2.4 (/opt/ros/humble/share/sensor_msgs/cmake)
+-- Found cv_bridge: 3.2.1 (/opt/ros/humble/share/cv_bridge/cmake)
+-- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: 
+-- Configured cppcheck exclude dirs and/or files: 
+-- Added test 'flake8' to check Python code syntax and style conventions
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+-- Added test 'uncrustify' to check C / C++ code style
+-- Configured uncrustify additional arguments: 
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/zychen/dev_ws/build/task2
+[35m[1mConsolidate compiler generated dependencies of target listener[0m
+[35m[1mConsolidate compiler generated dependencies of target talker[0m
+[ 50%] Built target listener
+[100%] Built target talker
+-- Install configuration: ""
+-- Up-to-date: /home/zychen/dev_ws/install/task2/lib/task2/talker
+-- Up-to-date: /home/zychen/dev_ws/install/task2/lib/task2/listener
+-- Up-to-date: /home/zychen/dev_ws/install/task2/share/task2/urdf
+-- Installing: /home/zychen/dev_ws/install/task2/share/task2/urdf/base.urdf.xacro
+-- Installing: /home/zychen/dev_ws/install/task2/share/task2/urdf/common_inertia.xacro
+-- Up-to-date: /home/zychen/dev_ws/install/task2/share/task2/urdf/test.urdf
+-- Up-to-date: /home/zychen/dev_ws/install/task2/share/task2/urdf/first_robot.xacro
+-- Up-to-date: /home/zychen/dev_ws/install/task2/share/task2/urdf/first_robot.urdf
+-- Installing: /home/zychen/dev_ws/install/task2/share/task2/urdf/plugins
+-- Installing: /home/zychen/dev_ws/install/task2/share/task2/urdf/plugins/gazebo_sensor_plugin.xacro
+-- Installing: /home/zychen/dev_ws/install/task2/share/task2/urdf/plugins/gazebo_control_plugin.xacro
+-- Up-to-date: /home/zychen/dev_ws/install/task2/share/task2/urdf/sensor
+-- Installing: /home/zychen/dev_ws/install/task2/share/task2/urdf/sensor/laser.urdf.xacro
+-- Installing: /home/zychen/dev_ws/install/task2/share/task2/urdf/sensor/imu.urdf.xacro
+-- Installing: /home/zychen/dev_ws/install/task2/share/task2/urdf/sensor/camera.urdf.xacro
+-- Installing: /home/zychen/dev_ws/install/task2/share/task2/urdf/actuactor
+-- Installing: /home/zychen/dev_ws/install/task2/share/task2/urdf/actuactor/wheel.urdf.xacro
+-- Installing: /home/zychen/dev_ws/install/task2/share/task2/urdf/actuactor/caster.urdf.xacro
+-- Installing: /home/zychen/dev_ws/install/task2/share/task2/urdf/trans_robot.urdf.xacro
+-- Up-to-date: /home/zychen/dev_ws/install/task2/share/task2/launch
+-- Installing: /home/zychen/dev_ws/install/task2/share/task2/launch/navigation2.launch.py
+-- Installing: /home/zychen/dev_ws/install/task2/share/task2/launch/display_robot.launch.py
+-- Installing: /home/zychen/dev_ws/install/task2/share/task2/launch/gazebo_sim1.launch.py
+-- Installing: /home/zychen/dev_ws/install/task2/share/task2/launch/gazebo_sim.launch.py
+-- Up-to-date: /home/zychen/dev_ws/install/task2/share/task2/launch/test1.launch.py
+-- Up-to-date: /home/zychen/dev_ws/install/task2/share/task2/config
+-- Installing: /home/zychen/dev_ws/install/task2/share/task2/config/nav2_params.yaml
+-- Up-to-date: /home/zychen/dev_ws/install/task2/share/task2/config/rviz
+-- Installing: /home/zychen/dev_ws/install/task2/share/task2/config/rviz/displayBetter.rviz
+-- Up-to-date: /home/zychen/dev_ws/install/task2/share/task2/config/rviz/config.rviz
+-- Up-to-date: /home/zychen/dev_ws/install/task2/share/task2/config/rviz/display.rviz
+-- Up-to-date: /home/zychen/dev_ws/install/task2/share/task2/config/rviz/task2.rviz
+-- Installing: /home/zychen/dev_ws/install/task2/share/task2/world
+-- Installing: /home/zychen/dev_ws/install/task2/share/task2/world/midRoom
+-- Installing: /home/zychen/dev_ws/install/task2/share/task2/world/midRoom/model.sdf
+-- Installing: /home/zychen/dev_ws/install/task2/share/task2/world/midRoom/model.config
+-- Installing: /home/zychen/dev_ws/install/task2/share/task2/world/custom_world.world
+-- Installing: /home/zychen/dev_ws/install/task2/share/task2/world/new_world.world
+-- Installing: /home/zychen/dev_ws/install/task2/share/task2/world/RightRoom
+-- Installing: /home/zychen/dev_ws/install/task2/share/task2/world/RightRoom/model.sdf
+-- Installing: /home/zychen/dev_ws/install/task2/share/task2/world/RightRoom/model.config
+-- Installing: /home/zychen/dev_ws/install/task2/share/task2/world/largeRoom
+-- Installing: /home/zychen/dev_ws/install/task2/share/task2/world/largeRoom/model.sdf
+-- Installing: /home/zychen/dev_ws/install/task2/share/task2/world/largeRoom/model.config
+-- Installing: /home/zychen/dev_ws/install/task2/share/task2/maps
+-- Installing: /home/zychen/dev_ws/install/task2/share/task2/maps/room1.yaml
+-- Installing: /home/zychen/dev_ws/install/task2/share/task2/maps/room1.pgm
+-- Installing: /home/zychen/dev_ws/install/task2/share/task2/maps/room.yaml
+-- Installing: /home/zychen/dev_ws/install/task2/share/task2/maps/room.pgm
+-- Up-to-date: /home/zychen/dev_ws/install/task2/share/ament_index/resource_index/package_run_dependencies/task2
+-- Installing: /home/zychen/dev_ws/install/task2/share/ament_index/resource_index/parent_prefix_path/task2
+-- Up-to-date: /home/zychen/dev_ws/install/task2/share/task2/environment/ament_prefix_path.sh
+-- Installing: /home/zychen/dev_ws/install/task2/share/task2/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/zychen/dev_ws/install/task2/share/task2/environment/path.sh
+-- Installing: /home/zychen/dev_ws/install/task2/share/task2/environment/path.dsv
+-- Up-to-date: /home/zychen/dev_ws/install/task2/share/task2/local_setup.bash
+-- Up-to-date: /home/zychen/dev_ws/install/task2/share/task2/local_setup.sh
+-- Up-to-date: /home/zychen/dev_ws/install/task2/share/task2/local_setup.zsh
+-- Installing: /home/zychen/dev_ws/install/task2/share/task2/local_setup.dsv
+-- Installing: /home/zychen/dev_ws/install/task2/share/task2/package.dsv
+-- Up-to-date: /home/zychen/dev_ws/install/task2/share/ament_index/resource_index/packages/task2
+-- Up-to-date: /home/zychen/dev_ws/install/task2/share/task2/cmake/task2Config.cmake
+-- Up-to-date: /home/zychen/dev_ws/install/task2/share/task2/cmake/task2Config-version.cmake
+-- Up-to-date: /home/zychen/dev_ws/install/task2/share/task2/package.xml

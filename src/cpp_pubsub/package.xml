@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>cpp_pubsub</name>
+  <version>0.0.0</version>
+  <description>Examples of minimal publisher/subscriber using rclcpp</description>
+  <maintainer email="zychen325@qq.com">zychen</maintainer>
+  <license>TODO: License declaration</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  
+  <!-- 添加依赖项 -->
+  <buildtool_depend>rclcpp</buildtool_depend>
+  <buildtool_depend>std_msgs</buildtool_depend>
+  <buildtool_depend>sensor_msgs</buildtool_depend>
+  <buildtool_depend>cv_bridge</buildtool_depend>
+  <buildtool_depend>OpenCV</buildtool_depend>
+
+
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
