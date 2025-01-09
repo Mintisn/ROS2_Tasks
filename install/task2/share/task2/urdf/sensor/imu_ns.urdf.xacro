@@ -7,7 +7,7 @@
     <!-- 声明IMU模块 -->
     <xacro:macro name="imu_xacro" params="namespace xyz">
         <!-- 机器人IMU部件 -->
-        <link name="${namespace}_imu_link">
+        <link name="${namespace}/imu_link">
             <visual>
                 <origin xyz="0 0 0" rpy="0 0 0" />
                 <geometry>
@@ -30,11 +30,11 @@
         </link>
 
         <!-- 机器人关节 -->
-        <joint name="${namespace}_imu_joint" type="fixed">
+        <joint name="${namespace}/imu_joint" type="fixed">
             <!-- 父部件 -->
             <parent link="${namespace}/base_link" />
             <!-- 子部件 -->
-            <child link="${namespace}_imu_link" />
+            <child link="${namespace}/imu_link" />
             <!-- 子部件相对父部件的平移和旋转 -->
             <origin xyz="${xyz}" rpy="0 0 0" />
         </joint>

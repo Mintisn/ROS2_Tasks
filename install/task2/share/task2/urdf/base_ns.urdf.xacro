@@ -48,7 +48,7 @@
         </link>
 
         <!-- 机器人关节 -->
-        <joint name="${namespace}_joint_name" type="fixed">
+        <joint name="${namespace}/joint_name" type="fixed">
             
             <!-- 父部件 -->
             <parent link="${namespace}/base_footprint" />

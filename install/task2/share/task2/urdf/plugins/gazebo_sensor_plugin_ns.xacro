@@ -2,15 +2,15 @@
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
     <xacro:macro name="gazebo_sensor_plugin" params="namespace">
         <!-- 激光传感器 -->
-        <gazebo reference="laser_link">
-            <sensor name="${namespace}_laserscan" type="ray">
-                <plugin name="${namespace}_laserscan_plugin" filename="libgazebo_ros_ray_sensor.so">
+        <gazebo reference="${namespace}/laser_link">
+            <sensor name="${namespace}/laserscan" type="ray">
+                <plugin name="laserscan_plugin" filename="libgazebo_ros_ray_sensor.so">
                     <ros>
                         <namespace>${namespace}</namespace>
                         <remapping>~/out:=scan</remapping>
                     </ros>
                     <output_type>sensor_msgs/LaserScan</output_type>
-                    <frame_name>laser_link</frame_name>
+                    <frame_name>${namespace}/laser_link</frame_name>
                 </plugin>
                 <always_on>true</always_on>
                 <visualize>true</visualize>
@@ -40,12 +40,12 @@
         </gazebo>
 
         <!-- IMU 传感器 -->
-        <gazebo reference="imu_link">
-            <sensor name="${namespace}_imu_sensor" type="imu">
-                <plugin name="${namespace}_imu_plugin" filename="libgazebo_ros_imu_sensor.so">
+        <gazebo reference="${namespace}/imu_link">
+            <sensor name="${namespace}/imu_sensor" type="imu">
+                <plugin name="imu_plugin" filename="libgazebo_ros_imu_sensor.so">
                     <ros>
                         <namespace>${namespace}</namespace>
-                        <remapping>~/out:=${namespace}/imu</remapping>
+                        <remapping>~/out:=imu</remapping>
                     </ros>
                     <initial_orientation_as_reference>false</initial_orientation_as_reference>
                 </plugin>
@@ -109,9 +109,9 @@
         </gazebo>
 
         <!-- 深度相机 -->
-        <gazebo reference="camera_link">
-            <sensor type="depth" name="${namespace}_camera_sensor">
-                <plugin name="${namespace}_depth_camera" filename="libgazebo_ros_camera.so">
+        <gazebo reference="${namespace}/camera_link">
+            <sensor type="depth" name="${namespace}/camera_sensor">
+                <plugin name="depth_camera" filename="libgazebo_ros_camera.so">
                     <ros>
                         <namespace>${namespace}</namespace>
                     </ros>
@@ -119,7 +119,7 @@
                 </plugin>
                 <always_on>true</always_on>
                 <update_rate>10</update_rate>
-                <camera name="camera">
+                <camera name="${namespace}/camera">
                     <horizontal_fov>1.5009831567</horizontal_fov>
                     <image>
                         <width>800</width>

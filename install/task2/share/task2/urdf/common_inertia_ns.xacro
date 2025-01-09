@@ -3,21 +3,21 @@
     <!-- 定义命名空间参数 -->
     <xacro:arg name="namespace" default="default_ns"/>
 
-    <xacro:macro name="${namespace}_box_inertia" params="m w h d">
+    <xacro:macro name="${namespace}/box_inertia" params="m w h d">
         <inertial>
             <mass value="${m}" />
             <inertia ixx="${(m/12) * (h*h + d*d)}" ixy="0.0" ixz="0.0" iyy="${(m/12) * (w*w + d*d)}" iyz="0.0" izz="${(m/12) * (w*w + h*h)}" />
         </inertial>
     </xacro:macro>
 
-    <xacro:macro name="${namespace}_cylinder_inertia" params="m r h">
+    <xacro:macro name="${namespace}/cylinder_inertia" params="m r h">
         <inertial>
             <mass value="${m}" />
             <inertia ixx="${(m/12) * (3*r*r + h*h)}" ixy="0" ixz="0" iyy="${(m/12) * (3*r*r + h*h)}" iyz="0" izz="${(m/2) * (r*r)}" />
         </inertial>
     </xacro:macro>
 
-    <xacro:macro name="${namespace}_sphere_inertia" params="m r">
+    <xacro:macro name="${namespace}/sphere_inertia" params="m r">
         <inertial>
             <mass value="${m}" />
             <inertia ixx="${(2/5) * m * (r*r)}" ixy="0.0" ixz="0.0" iyy="${(2/5) * m * (r*r)}" iyz="0.0" izz="${(2/5) * m * (r*r)}" />

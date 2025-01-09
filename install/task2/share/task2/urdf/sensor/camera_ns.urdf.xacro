@@ -9,9 +9,9 @@
     <!-- 声明 camera 模块 -->
     <xacro:macro name="camera_xacro" params="namespace xyz">
         <!-- 虚拟模块 -->
-        <link name="${namespace}_camera_optical_link"></link>  
+        <link name="${namespace}/camera_optical_link"></link>  
         <!-- 机器人 IMU 部件 -->
-        <link name="${namespace}_camera_link">
+        <link name="${namespace}/camera_link">
             <visual>
                 <origin xyz="0 0 0" rpy="0 0 0" />
                 <geometry>
@@ -34,24 +34,24 @@
         </link>
 
         <!-- 机器人关节 -->
-        <joint name="${namespace}_camera_joint" type="fixed">
+        <joint name="${namespace}/camera_joint" type="fixed">
             <!-- 父部件 -->
             <parent link="${namespace}/base_link" />
             <!-- 子部件 -->
-            <child link="${namespace}_camera_link" />
+            <child link="${namespace}/camera_link" />
             <!-- 子部件相对父部件的平移和旋转 -->
             <origin xyz="${xyz}" rpy="0 0 0" />
         </joint>
 
         <!-- 把相机 z 轴朝向前方 -->
-        <joint name="${namespace}_camera_optical_link_joint" type="fixed">
-            <parent link="${namespace}_camera_link" />
-            <child link="${namespace}_camera_optical_link" />
+        <joint name="${namespace}/camera_optical_link_joint" type="fixed">
+            <parent link="${namespace}/camera_link" />
+            <child link="${namespace}/camera_optical_link" />
             <origin xyz="0 0 0" rpy="${-pi/2} 0.0 ${-pi/2}" />
         </joint>
 
         <!-- Gazebo 配置 -->
-        <gazebo reference="${namespace}_camera_link">
+        <gazebo reference="${namespace}/camera_link">
             <material>Gazebo/Yellow</material>
         </gazebo>
     </xacro:macro>

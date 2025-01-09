@@ -7,7 +7,7 @@
     <!-- 声明雷达模块 -->
     <xacro:macro name="laser_xacro" params="namespace xyz">
         <!-- 雷达支撑杆 -->
-        <link name="${namespace}_laser_cylinder_link">
+        <link name="${namespace}/laser_cylinder_link">
             <visual>
                 <origin xyz="0 0 0" rpy="0 0 0" />
                 <geometry>
@@ -30,7 +30,7 @@
         </link>
 
         <!-- 雷达 -->
-        <link name="${namespace}_laser_link">
+        <link name="${namespace}/laser_link">
             <visual>
                 <origin xyz="0 0 0" rpy="0 0 0" />
                 <geometry>
@@ -53,28 +53,28 @@
         </link>
 
         <!-- 将雷达固定到支撑杆 -->
-        <joint name="${namespace}_laser_joint" type="fixed">
+        <joint name="${namespace}/laser_joint" type="fixed">
             <!-- 父部件 -->
-            <parent link="${namespace}_laser_cylinder_link" />
+            <parent link="${namespace}/laser_cylinder_link" />
             <!-- 子部件 -->
-            <child link="${namespace}_laser_link" />
+            <child link="${namespace}/laser_link" />
             <!-- 子部件相对父部件的平移和旋转 -->
             <origin xyz="0 0 0.05" rpy="0 0 0" />
         </joint>
 
-        <joint name="${namespace}_laser_cylinder_joint" type="fixed">
+        <joint name="${namespace}/laser_cylinder_joint" type="fixed">
             <!-- 父部件 -->
             <parent link="${namespace}/base_link" />
             <!-- 子部件 -->
-            <child link="${namespace}_laser_cylinder_link" />
+            <child link="${namespace}/laser_cylinder_link" />
             <!-- 子部件相对父部件的平移和旋转 -->
             <origin xyz="${xyz}" rpy="0 0 0" />
         </joint>
 
-        <gazebo reference="${namespace}_laser_cylinder_link">
+        <gazebo reference="${namespace}/laser_cylinder_link">
             <material>Gazebo/Red</material>
         </gazebo>
-        <gazebo reference="${namespace}_laser_link">
+        <gazebo reference="${namespace}/laser_link">
             <material>Gazebo/Red</material>
         </gazebo>
     </xacro:macro>

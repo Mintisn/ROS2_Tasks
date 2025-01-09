@@ -5,12 +5,12 @@ import rclpy
 
 def main():
     rclpy.init()
-    navigator = BasicNavigator()  #(namespace="robot1")
+    navigator = BasicNavigator(namespace="robot2")
     initial_pose = PoseStamped()
     initial_pose.header.frame_id = 'map'
     initial_pose.header.stamp = navigator.get_clock().now().to_msg()
-    initial_pose.pose.position.x = 0.0
-    initial_pose.pose.position.y = 0.0
+    initial_pose.pose.position.x = 1.0
+    initial_pose.pose.position.y = 1.0
     initial_pose.pose.orientation.w = 1.0
     navigator.setInitialPose(initial_pose)
     navigator.waitUntilNav2Active()

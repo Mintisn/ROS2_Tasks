@@ -12,7 +12,11 @@ setup.py
 resource/robot_application
 robot_application/__init__.py
 robot_application/get_robot.pose.py
+robot_application/init_pose.py
+robot_application/init_pose2.py
 robot_application/init_robot_pose.py
+robot_application/init_robot_pose1.py
+robot_application/init_robot_pose2.py
 robot_application/waypoint.py
 robot_application/waypoint2.py
 test/test_copyright.py

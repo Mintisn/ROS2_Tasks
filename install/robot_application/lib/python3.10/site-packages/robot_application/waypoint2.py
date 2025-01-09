@@ -5,8 +5,8 @@ from rclpy.duration import Duration
 
 def main():
     rclpy.init()
-    navigator = BasicNavigator(namespace='trans_robot_1')
-    navigator2 = BasicNavigator(namespace='trans_robot_2')
+    navigator = BasicNavigator(namespace='robot1')
+    navigator2 = BasicNavigator(namespace='robot2')
     navigator.waitUntilNav2Active()
     navigator2.waitUntilNav2Active()
     # 创建点集1
@@ -37,22 +37,22 @@ def main():
     goal2_pose1 = PoseStamped()
     goal2_pose1.header.frame_id = 'map'
     goal2_pose1.header.stamp = navigator.get_clock().now().to_msg()
-    goal2_pose1.pose.position.x = 1.0
-    goal2_pose1.pose.position.y = 0.0
+    goal2_pose1.pose.position.x = 2.0
+    goal2_pose1.pose.position.y = 2.0
     goal2_pose1.pose.orientation.w = 1.0
     goal2_poses.append(goal2_pose1)
     goal2_pose2 = PoseStamped()
     goal2_pose2.header.frame_id = 'map'
     goal2_pose2.header.stamp = navigator.get_clock().now().to_msg()
-    goal2_pose2.pose.position.x = -3.0
+    goal2_pose2.pose.position.x = 1.0
     goal2_pose2.pose.position.y = 1.0
     goal2_pose2.pose.orientation.w = 1.0
     goal2_poses.append(goal2_pose2)
     goal2_pose3 = PoseStamped()
     goal2_pose3.header.frame_id = 'map'
     goal2_pose3.header.stamp = navigator.get_clock().now().to_msg()
-    goal2_pose3.pose.position.x = -3.0
-    goal2_pose3.pose.position.y = -1.0
+    goal2_pose3.pose.position.x = -2.0
+    goal2_pose3.pose.position.y = -2.0
     goal2_pose3.pose.orientation.w = 1.0
     goal2_poses.append(goal2_pose3)
     # 调用路点导航服务

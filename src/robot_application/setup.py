@@ -23,6 +23,10 @@ setup(
             "waypoint=robot_application.waypoint:main",
             "waypoint2=robot_application.waypoint2:main",
             "init_robot_pose=robot_application.init_robot_pose:main",
+            "init_robot_pose1=robot_application.init_robot_pose1:main",
+            "init_robot_pose2=robot_application.init_robot_pose2:main",
+            "init_pose=robot_application.init_pose:main",
+            "init_pose2=robot_application.init_pose2:main",
         ],
     },
 )
