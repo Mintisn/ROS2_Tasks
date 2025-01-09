@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+    <xacro:include filename="$(find task2)/urdf/common_inertia.xacro"/>
+    <!-- 声明雷达模块 -->
+    <xacro:macro name="laser_xacro2" params=" xyz">
+        <!-- 雷达支撑杆 -->
+        <link name="laser_cylinder_link2">
+            <visual>
+                <origin xyz="0 0 0" rpy="0 0 0" />
+                <geometry>
+                    <cylinder length="0.10" radius="0.01" />
+                </geometry>
+                <material name="r">
+                    <color rgba="1 0 0 1.0" />
+                </material>
+            </visual>
+            <collision>
+                <origin xyz="0 0 0" rpy="0 0 0" />
+                <geometry>
+                    <cylinder length="0.10" radius="0.01" />
+                </geometry>
+                <material name="r">
+                    <color rgba="1 0 0 1.0" />
+                </material>
+            </collision>
+            <xacro:cylinder_inertia m="0.05" r="0.01" h="0.10"/>
+        </link>
+
+        <!-- 雷达 -->
+        <link name="laser_link2">
+            <visual>
+                <origin xyz="0 0 0" rpy="0 0 0" />
+                <geometry>
+                    <cylinder length="0.02" radius="0.02" />
+                </geometry>
+                <material name="r">
+                    <color rgba="1 0 0 1.0" />
+                </material>
+            </visual>
+            <collision>
+                <origin xyz="0 0 0" rpy="0 0 0" />
+                <geometry>
+                    <cylinder length="0.02" radius="0.02" />
+                </geometry>
+                <material name="r">
+                    <color rgba="1 0 0 1.0" />
+                </material>
+            </collision>
+            <xacro:cylinder_inertia m="0.1" r="0.02" h="0.02"/>
+        </link>
+
+        <!-- 将雷达固定到支撑杆 -->
+        <joint name="laser_joint2" type="fixed">
+            <!-- 父部件 -->
+            <parent link="laser_cylinder_link2" />
+            <!-- 子部件 -->
+            <child link="laser_link2" />
+            <!-- 子部件相对父部件的平移和旋转 -->
+            <origin xyz="0 0 0.05" rpy="0 0 0" />
+        </joint>
+
+        <joint name="laser_cylinder_link2" type="fixed">
+            <!-- 父部件 -->
+            <parent link="base_link2" />
+            <!-- 子部件 -->
+            <child link="laser_cylinder_link2" />
+            <!-- 子部件相对父部件的平移和旋转 -->
+            <origin xyz="${xyz}" rpy="0 0 0" />
+        </joint>
+
+        <gazebo reference="laser_cylinder_link2">
+            <material>Gazebo/Red</material>
+        </gazebo>
+        <gazebo reference="laser_link2">
+            <material>Gazebo/Red</material>
+        </gazebo>
+    </xacro:macro>
+
+</robot>

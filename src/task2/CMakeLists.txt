@@ -17,11 +17,7 @@ endif()
 # find_package(gazebo_ros REQUIRED)
 
 # 上一个项目
-find_package(rclcpp REQUIRED)
-find_package(std_msgs REQUIRED)
-find_package(sensor_msgs REQUIRED)
-find_package(cv_bridge REQUIRED)
-find_package(OpenCV REQUIRED) # 添加openCV作为依赖项
+find_package(ament_cmake REQUIRED)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
@@ -36,18 +32,10 @@ if(BUILD_TESTING)
 endif()
 
 # 增加编译规则 发布者 
-# 2024年10月15日: 添加依赖opencv4 cv_bridge
-add_executable(talker src/publisher_member_function.cpp)
-ament_target_dependencies(talker rclcpp std_msgs sensor_msgs cv_bridge OpenCV)
-# 订阅者
-add_executable(listener src/subscriber_member_function.cpp )
-ament_target_dependencies(listener rclcpp std_msgs sensor_msgs cv_bridge OpenCV)
+
 
 # 增加安装规则
-install(TARGETS
-  talker
-  listener # 订阅者
-  DESTINATION lib/${PROJECT_NAME})
+
 
   
 # 安装 URDF launch文件

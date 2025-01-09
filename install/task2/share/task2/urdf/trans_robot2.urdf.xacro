@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="trans_robot2">
+
+<!-- 基础部分和传感器 -->
+<xacro:include filename="$(find task2)/urdf/base2.urdf.xacro"/>
+<xacro:include filename="$(find task2)/urdf/sensor/imu2.urdf.xacro"/>
+<xacro:include filename="$(find task2)/urdf/sensor/camera2.urdf.xacro"/>
+<xacro:include filename="$(find task2)/urdf/sensor/laser2.urdf.xacro"/>
+<!-- 执行器部分 -->
+<xacro:include filename="$(find task2)/urdf/actuactor/wheel.urdf.xacro"/>
+<xacro:include filename="$(find task2)/urdf/actuactor/caster.urdf.xacro"/>
+<!-- 插件 -->
+<xacro:include filename="$(find task2)/urdf/plugins/gazebo_control_plugin2.xacro"/>
+<xacro:include filename="$(find task2)/urdf/plugins/gazebo_sensor_plugin2.xacro"/>
+
+
+<xacro:base_xacro2 length="0.12" radius="0.1" />
+<xacro:imu_xacro2 xyz="0 0 0.02" />
+<xacro:camera_xacro2 xyz="0.1 0 0.075" />
+<xacro:laser_xacro2 xyz="0.0 0 0.1" />
+
+<!-- r=0.016 + 0.06 0.082 -->
+<xacro:wheel_xacro whlee_name="left_wheel2" xyz="0.0 0.1 -0.06" />
+<xacro:wheel_xacro whlee_name="right_wheel2" xyz="0.0 -0.1 -0.06" />
+<!-- r=0.08 + 0.074 0.082  TODO 参考给出的0.076-->
+<xacro:caster_xacro caster_name="front_wheel2" xyz="0.08 0 -0.076" />
+<xacro:caster_xacro caster_name="back_wheel2" xyz="-0.08 0 -0.076" />
+
+<xacro:gazebo_control_plugin2/>
+<xacro:gazebo_sensor_plugin2/>
+
+</robot>

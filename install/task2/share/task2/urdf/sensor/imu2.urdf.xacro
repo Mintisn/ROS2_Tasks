@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+    <xacro:include filename="$(find task2)/urdf/common_inertia.xacro"/>
+    <!-- 声明IMU模块 -->
+    <xacro:macro name="imu_xacro2" params=" xyz">
+        <!-- 机器人IMU部件 -->
+        <link name="imu_link2">
+            <visual>
+                <origin xyz="0 0 0" rpy="0 0 0" />
+                <geometry>
+                    <box size="0.02 0.02 0.02" />
+                </geometry>
+                <material name="black">
+                    <color rgba="0 0 0 0.5" />
+                </material>
+            </visual>
+            <collision>
+                <origin xyz="0 0 0" rpy="0 0 0" />
+                <geometry>
+                    <box size="0.02 0.02 0.02" />
+                </geometry>
+                <material name="black">
+                    <color rgba="0 0 0 0.5" />
+                </material>
+            </collision>
+            <xacro:box_inertia m="0.05" w="0.02" h="0.02" d="0.02" />
+
+        </link>
+
+        <!-- 机器人关节 -->
+        <joint name="imu_joint2" type="fixed">
+            <!-- 父部件 -->
+            <parent link="base_link2" />
+            <!-- 子部件 -->
+            <child link="imu_link2" />
+            <!-- 子部件相对父部件的平移和旋转 -->
+            <origin xyz="${xyz}" rpy="0 0 0" />
+        </joint>
+    </xacro:macro>
+
+</robot>

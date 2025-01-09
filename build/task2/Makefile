@@ -197,80 +197,6 @@ task2_uninstall/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/task2_uninstall.dir/build.make CMakeFiles/task2_uninstall.dir/build
 .PHONY : task2_uninstall/fast
 
-#=============================================================================
-# Target rules for targets named talker
-
-# Build rule for target.
-talker: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 talker
-.PHONY : talker
-
-# fast build rule for target.
-talker/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/talker.dir/build.make CMakeFiles/talker.dir/build
-.PHONY : talker/fast
-
-#=============================================================================
-# Target rules for targets named listener
-
-# Build rule for target.
-listener: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 listener
-.PHONY : listener
-
-# fast build rule for target.
-listener/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/listener.dir/build.make CMakeFiles/listener.dir/build
-.PHONY : listener/fast
-
-src/publisher_member_function.o: src/publisher_member_function.cpp.o
-.PHONY : src/publisher_member_function.o
-
-# target to build an object file
-src/publisher_member_function.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/talker.dir/build.make CMakeFiles/talker.dir/src/publisher_member_function.cpp.o
-.PHONY : src/publisher_member_function.cpp.o
-
-src/publisher_member_function.i: src/publisher_member_function.cpp.i
-.PHONY : src/publisher_member_function.i
-
-# target to preprocess a source file
-src/publisher_member_function.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/talker.dir/build.make CMakeFiles/talker.dir/src/publisher_member_function.cpp.i
-.PHONY : src/publisher_member_function.cpp.i
-
-src/publisher_member_function.s: src/publisher_member_function.cpp.s
-.PHONY : src/publisher_member_function.s
-
-# target to generate assembly for a file
-src/publisher_member_function.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/talker.dir/build.make CMakeFiles/talker.dir/src/publisher_member_function.cpp.s
-.PHONY : src/publisher_member_function.cpp.s
-
-src/subscriber_member_function.o: src/subscriber_member_function.cpp.o
-.PHONY : src/subscriber_member_function.o
-
-# target to build an object file
-src/subscriber_member_function.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/listener.dir/build.make CMakeFiles/listener.dir/src/subscriber_member_function.cpp.o
-.PHONY : src/subscriber_member_function.cpp.o
-
-src/subscriber_member_function.i: src/subscriber_member_function.cpp.i
-.PHONY : src/subscriber_member_function.i
-
-# target to preprocess a source file
-src/subscriber_member_function.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/listener.dir/build.make CMakeFiles/listener.dir/src/subscriber_member_function.cpp.i
-.PHONY : src/subscriber_member_function.cpp.i
-
-src/subscriber_member_function.s: src/subscriber_member_function.cpp.s
-.PHONY : src/subscriber_member_function.s
-
-# target to generate assembly for a file
-src/subscriber_member_function.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/listener.dir/build.make CMakeFiles/listener.dir/src/subscriber_member_function.cpp.s
-.PHONY : src/subscriber_member_function.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -286,14 +212,6 @@ help:
 	@echo "... test"
 	@echo "... task2_uninstall"
 	@echo "... uninstall"
-	@echo "... listener"
-	@echo "... talker"
-	@echo "... src/publisher_member_function.o"
-	@echo "... src/publisher_member_function.i"
-	@echo "... src/publisher_member_function.s"
-	@echo "... src/subscriber_member_function.o"
-	@echo "... src/subscriber_member_function.i"
-	@echo "... src/subscriber_member_function.s"
 .PHONY : help
 
 
