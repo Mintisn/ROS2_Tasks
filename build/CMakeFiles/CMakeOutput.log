@@ -7902,3 +7902,51 @@ Parsed CXX implicit link information from above output:
   implicit fwks: []
 
 
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/zychen/dev_ws/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_d645a/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_d645a.dir/build.make CMakeFiles/cmTC_d645a.dir/build
+gmake[1]: Entering directory '/home/zychen/dev_ws/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d645a.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_d645a.dir/CheckIncludeFile.c.o -c /home/zychen/dev_ws/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_d645a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d645a.dir/link.txt --verbose=1
+/usr/bin/cc CMakeFiles/cmTC_d645a.dir/CheckIncludeFile.c.o -o cmTC_d645a 
+gmake[1]: Leaving directory '/home/zychen/dev_ws/build/CMakeFiles/CMakeTmp'
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD succeeded with the following output:
+Change Dir: /home/zychen/dev_ws/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_9f012/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_9f012.dir/build.make CMakeFiles/cmTC_9f012.dir/build
+gmake[1]: Entering directory '/home/zychen/dev_ws/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9f012.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_9f012.dir/src.c.o -c /home/zychen/dev_ws/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_9f012
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9f012.dir/link.txt --verbose=1
+/usr/bin/cc CMakeFiles/cmTC_9f012.dir/src.c.o -o cmTC_9f012 
+gmake[1]: Leaving directory '/home/zychen/dev_ws/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
