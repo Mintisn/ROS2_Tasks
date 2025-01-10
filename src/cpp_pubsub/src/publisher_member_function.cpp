@@ -98,10 +98,27 @@ class VideoPublisher : public rclcpp::Node
     cv::VideoCapture cap_;
   };
 
-  int main(int argc, char * argv[])
-  {
+int main(int argc, char * argv[])
+{
     rclcpp::init(argc, argv);
-    rclcpp::spin(std::make_shared<VideoPublisher>());
+
+    // 创建两个共享指针节点实例
+    auto minimal_subscriber = std::make_shared<MinimalPublisher>();
+    auto video_subscriber = std::make_shared<VideoPublisher>();
+
+    // 为每个节点创建一个线程
+    std::thread minimal_subscriber_thread([&]() {
+        rclcpp::spin(minimal_subscriber);
+    });
+
+    std::thread video_subscriber_thread([&]() {
+        rclcpp::spin(video_subscriber);
+    });
+
+    // 等待线程完成
+    minimal_subscriber_thread.join();
+    video_subscriber_thread.join();
+
     rclcpp::shutdown();
     return 0;
-  }
+}

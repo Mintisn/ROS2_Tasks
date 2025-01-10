@@ -15,7 +15,7 @@ def generate_launch_description():
     
     # 为每个机器人设置地图路径，使用相同的地图
     map_yaml_path = launch.substitutions.LaunchConfiguration(
-        'map_yaml', default=os.path.join(task_dir, 'maps', 'room1.yaml'))  # 共享地图
+        'map', default=os.path.join(task_dir, 'maps', 'room1.yaml'))  # 共享地图
     
     nav2_param_path = launch.substitutions.LaunchConfiguration(
         'params_file', default=os.path.join(task_dir, 'config', 'nav2_params.yaml'))
@@ -28,7 +28,7 @@ def generate_launch_description():
         # 声明新的 Launch 参数
         launch.actions.DeclareLaunchArgument('use_sim_time', default_value=use_sim_time,
                                              description='Use simulation (Gazebo) clock if true'),
-        launch.actions.DeclareLaunchArgument('map_yaml', default_value=map_yaml_path,
+        launch.actions.DeclareLaunchArgument('map', default_value=map_yaml_path,
                                              description='Full path to map file to load for both robots'),
         launch.actions.DeclareLaunchArgument('params_file', default_value=nav2_param_path,
                                              description='Full path to param file to load'),

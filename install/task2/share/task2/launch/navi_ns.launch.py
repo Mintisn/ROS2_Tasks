@@ -22,7 +22,7 @@ def generate_launch_description():
     # 修改地图配置
     map_yaml_path = LaunchConfiguration(
         'map',
-        default=os.path.join(task_dir, 'maps', 'iceworld.yaml')
+        default=os.path.join(task_dir, 'maps', 'room1.yaml')
     )
     
     # 为Robot1启动导航堆栈

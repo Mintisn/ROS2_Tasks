@@ -76,15 +76,26 @@ class VideoSubscriber : public rclcpp::Node
 
 int main(int argc, char * argv[])
 {
+    rclcpp::init(argc, argv);
 
-/**
- *   main函数中的内容和发布者几乎是一致的，就不再赘述。
- * 它们的唯一区别就在于：对于发布者节点而言，rclcpp::spin意味着启动计时器
- * 但对于订阅者而言，rclcpp::spin仅仅意味着随时准备接收消息。
- */
+    // 创建两个共享指针节点实例
+    auto minimal_subscriber = std::make_shared<MinimalSubscriber>();
+    auto video_subscriber = std::make_shared<VideoSubscriber>();
 
-  rclcpp::init(argc, argv);
-  rclcpp::spin(std::make_shared<VideoSubscriber>());
-  rclcpp::shutdown();
-  return 0;
+    // 为每个节点创建一个线程
+    std::thread minimal_subscriber_thread([&]() {
+        rclcpp::spin(minimal_subscriber);
+    });
+
+    std::thread video_subscriber_thread([&]() {
+        rclcpp::spin(video_subscriber);
+    });
+
+    // 等待线程完成
+    minimal_subscriber_thread.join();
+    video_subscriber_thread.join();
+
+    rclcpp::shutdown();
+    return 0;
 }
+
